@@ -1,0 +1,39 @@
+/* styleamos toda la tabla dinamica */
+
+/*centra toda la tabla*/
+#tablaDinamica {
+  display: flex;
+  flex-direction: column;
+  border: 2.5px black solid;
+  border-radius: 6px;
+  background-color: aliceblue;
+  margin: 0.5% 1.5% 0.9% 1.5%;
+}
+/*acomoda el titulo en el centro*/
+#form-title {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+.form-header {
+  display: flex;
+  justify-content: center;
+}
+table {
+  border-collapse: collapse;
+  margin: 1.4%;
+}
+/* acomodamos texto */
+table > * {
+  font-weight: bold;
+  text-align: center;
+}
+thead th {
+  border-collapse: collapse;
+  border-left: 2px green dashed;
+  border-top: 2px green dashed;
+}
+tbody tr,
+tbody td {
+  border: 2px black dashed;
+}

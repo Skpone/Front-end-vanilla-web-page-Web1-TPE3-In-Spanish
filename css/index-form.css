@@ -1,0 +1,46 @@
+/*en mobile size*/
+.container {
+  display: grid;
+  grid-template-rows: auto auto; /*declaramos 2 rows uno abajo del otro*/
+  grid-template-areas:
+    "formulario"
+    "aside";
+}
+
+.container > * {
+  background-color: rgba(137, 43, 226, 0.919);
+  border-radius: 10px;
+  margin: 1px;
+}
+
+/* nombrando */
+form {
+  /*acomodando elementos dentro del form*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: formulario;
+}
+form > * {
+  /*espaciando los childs de manera responsive*/
+  margin: 0.8px 0px 0.8px 0px;
+  margin-left: 15%;
+  /* no ocupan todo el width del form y queda mejor */
+  width: 70%;
+}
+aside {
+  grid-area: aside;
+  /*el texto queda centrado y no pegado */
+  padding: 10px;
+}
+/*nombrando*/
+
+/*en pc/desk size*/
+@media screen and (min-width: 769px) {
+  .container {
+    column-gap: 1px; /*espacio entre el formulario y el aside*/
+    grid-template-rows: none; /*para que queden uno al lado del otro*/
+    grid-template-columns: 1fr;
+    grid-template-areas: "formulario aside";
+  }
+}

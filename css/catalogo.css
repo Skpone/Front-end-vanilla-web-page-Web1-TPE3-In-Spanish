@@ -1,0 +1,71 @@
+/*dimensiones mobile*/
+section {
+  box-shadow: 3px 3px 5px black;
+  background-color: rgba(137, 43, 226, 0.919);
+  border-radius: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: /* ponemos uno abajo del otro */
+    "fotos"
+    "aside";
+}
+.fotos {
+  margin: 5px;
+
+  border: 5px red solid;
+  border-radius: 5px;
+  grid-area: fotos; /*lo nombramos para el grid de section*/
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: /*ponemos uno abajo del otro*/
+    "img1"
+    "img2";
+}
+img {
+  /*le damos estas propiedades a las img para que queden rellenas*/
+  height: 200px;
+  width: 100%;
+}
+/* nombramos */
+.img1 {
+  grid-area: img1;
+}
+.img2 {
+  grid-area: img2;
+}
+
+/* styleamos los aside */
+aside {
+  padding: 3px;
+  grid-area: aside;
+  border: 5px blue solid;
+  border-radius: 5px;
+  margin: 1px 5px 5px 5px;
+}
+aside h4 {
+  margin: 0;
+}
+/* dimensiones pc/desktop */
+@media screen and (min-width: 769px) {
+  section {
+    /*ponemos a article y aside uno al lado del otro*/
+    grid-template-columns: auto auto;
+    grid-template-areas: "article aside";
+  }
+  .fotos {
+    margin: 5px;
+
+    border: 5px red solid;
+    grid-area: article;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none; /*sin rows asi no hay espacio de más*/
+    grid-template-areas: "img1 img2"; /*ponemos las imgs una al lado de la otra*/
+  }
+  aside > * {
+    font-size: 1.4vw;
+  }
+}

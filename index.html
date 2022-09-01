@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Marvel" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index-form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PELUCHES MARVEL</title>
+</head>
+<body>
+    <header>
+        <div class="logos">
+            <h1><a href="index.html">PELUCHES MARVEL</a></h1>
+            <div class="hamburger"><a href="#">MENU</a></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="paginas/catalogo.html">Catálogo</a></li>
+                <li><a href="paginas/comprar.html">Comprar</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">+Tiendas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form id="form"> <!-- le meto id nomas x el js -->
+            <input type="email" name="email" placeholder="e-mail" required>
+            <input type="text" name="name" placeholder="nombre" maxlength="20" required>
+            <input type="password" name="password" placeholder="contraseña" minlength="6" maxlength="20" required>
+            <div id="captcha">
+                    <span id="captcha-text"></span>
+                    <button id="captcha-generator">Generar</button>
+                    <input type="text" name="captcha-input" placeholder="codigo captcha" required>
+                    <button id="captchaCheck-btn">Check</button>
+                    <span id="captcha-answer"></span>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+        <aside>
+            <h3>Nuestro beneficios:</h3>
+            <p>Ingresa para tener todos nuestros descuentos semanales, ofertas, premios y mas!</p>
+        </aside>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#">Terminos y Condiciones</a></li>
+            <li>Copyright @2022</li>
+        </ul>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/formulario.js"></script>
+</body>
+</html>
